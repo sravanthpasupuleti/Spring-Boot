@@ -1,9 +1,8 @@
 package com.example.repositories;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+@Repository
 public class OwnerRepositoryimpl implements OwnerRepository{
 
     public OwnerRepositoryimpl(){

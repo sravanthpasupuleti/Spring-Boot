@@ -2,11 +2,13 @@ package com.example.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Service;
 
 import com.example.repositories.OwnerRepository;
 
-@Component
+@Scope("prototype")
+@Service
 public class OwnerServiceimpl implements OwnerService{
 
     @Autowired
@@ -19,6 +21,12 @@ public class OwnerServiceimpl implements OwnerService{
         System.out.println("OwnerServiceimpl constructor executed");
     }
 
+    @Override
+    public void modifyid(int idd){
+        this.id = idd;
+    }
+
+    @Override
     public String serviceid(){
         return repo.findid(id);
     }
