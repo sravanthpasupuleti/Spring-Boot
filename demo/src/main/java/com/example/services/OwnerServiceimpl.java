@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
+import com.example.ownerexception.OwnerNotFoundException;
 import com.example.repositories.OwnerRepository;
 
 @Scope("prototype")
@@ -22,8 +23,12 @@ public class OwnerServiceimpl implements OwnerService{
     }
 
     @Override
-    public void modifyid(int idd){
-        this.id = idd;
+    public void modifyid(int idd) throws OwnerNotFoundException{
+        if(idd%2 != 0){
+            throw new OwnerNotFoundException("owner id should be even number");
+        }else{
+            this.id = idd;
+        }
     }
 
     @Override
