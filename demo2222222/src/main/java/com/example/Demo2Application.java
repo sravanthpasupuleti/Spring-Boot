@@ -1,5 +1,9 @@
 package com.example;
 
+import java.util.Scanner;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -12,16 +16,24 @@ public class Demo2Application implements CommandLineRunner{
 
 	@Autowired
 	private OwnerService ownerService;
+	
+	private static final Logger LOGGER = LoggerFactory.getLogger(Demo2Application.class);
 
 	public static void main(String[] args) {
-		System.out.println("START");
 		SpringApplication.run(Demo2Application.class, args);
-		System.out.println("END");
+		LOGGER.warn("END");
 	}
 
 	@Override
 	public void run(String... args) throws Exception {
+		LOGGER.info("START");
 		System.out.println(ownerService.Serviceid());
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Tell me Owner id : ");
+		int id = scanner.nextInt();
+		ownerService.getid(id);
+		System.out.println(ownerService.Serviceid());
+		LOGGER.info(ownerService.Serviceid());
 	}
 
 }

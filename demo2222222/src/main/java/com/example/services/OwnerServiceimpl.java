@@ -19,6 +19,10 @@ public class OwnerServiceimpl implements OwnerService{
         System.out.println("OwnerServiceimpl Constructor is executed");
     }
 
+    public void getid(int id) throws Exception{
+        this.id = id;
+    }
+
     @Override
     public String Serviceid(){
         return ownerRepository.findid(id);
