@@ -1,0 +1,21 @@
+package com.abhishekvermaa10.service.impl;
+
+import com.abhishekvermaa10.repository.OwnerRepository;
+import com.abhishekvermaa10.service.OwnerService;
+
+
+public class OwnerServiceImpl implements OwnerService {
+	private OwnerRepository ownerRepository;
+	private int ownerId;
+
+	public OwnerServiceImpl(OwnerRepository ownerRepository, int ownerId) {    //Construcor based dependency injection
+		this.ownerRepository = ownerRepository;
+		this.ownerId = ownerId;
+		System.out.println("OwnerServiceImpl bean created.");
+	}
+
+	@Override
+	public String findOwner() {
+		return ownerRepository.findOwner(ownerId);
+	}
+}
