@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 import com.abhishekvermaa10.repository.OwnerRepository;
 import com.abhishekvermaa10.service.OwnerService;
 
-@Service //and also here you can rename your bean anme
+@Service("ownerService") //and also here you can rename your bean anme
 public class OwnerServiceImpl implements OwnerService {
-	@Autowired
+	@Autowired    //property-based auto wiring
 	private OwnerRepository ownerRepository;
 	@Value("9")
 	private int ownerId;
@@ -23,15 +23,6 @@ public class OwnerServiceImpl implements OwnerService {
 
 	public OwnerServiceImpl() {
 		System.out.println("OwnerServiceImpl default bean created.");
-	}
-
-
-	public void setOwnerRepository(OwnerRepository ownerRepository){   //setter  based AutoWired
-		this.ownerRepository =ownerRepository;
-	}
-	
-	public void setOwnerId(int ownerid){
-		ownerId = ownerid;
 	}
 
 	@Override
