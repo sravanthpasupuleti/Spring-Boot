@@ -1,0 +1,10 @@
+2025-12-02T19:32:23.144+05:30  INFO 49980 --- [Demo] [main] com.abhishekvermaa10.Demo                : Starting Demo using Java 21.0.9 with PID 49980 (F:\SpringBoot\Logging\target\classes started by vishwana in F:\SpringBoot\Logging)
+2025-12-02T19:32:23.151+05:30  INFO 49980 --- [Demo] [main] com.abhishekvermaa10.Demo                : No active profile set, falling back to 1 default profile: "default"
+2025-12-02T19:32:26.052+05:30  INFO 49980 --- [Demo] [main] com.abhishekvermaa10.Demo                : Started Demo in 4.92 seconds (process running for 6.76)
+2025-12-02T19:32:26.073+05:30  INFO 49980 --- [Demo] [main] com.abhishekvermaa10.Demo                : Found owner with ownerId 10
+2025-12-02T19:32:44.171+05:30  INFO 49980 --- [Demo] [main] com.abhishekvermaa10.Demo                : Found owner with ownerId 2
+2025-12-02T19:35:54.352+05:30  INFO 54036 --- [Demo] [main] com.abhishekvermaa10.Demo                : Starting Demo using Java 21.0.9 with PID 54036 (F:\SpringBoot\Logging\target\classes started by vishwana in F:\SpringBoot\Logging)
+2025-12-02T19:35:54.389+05:30  INFO 54036 --- [Demo] [main] com.abhishekvermaa10.Demo                : No active profile set, falling back to 1 default profile: "default"
+2025-12-02T19:35:57.967+05:30  INFO 54036 --- [Demo] [main] com.abhishekvermaa10.Demo                : Started Demo in 7.129 seconds (process running for 9.016)
+2025-12-02T19:35:58.004+05:30  INFO 54036 --- [Demo] [main] com.abhishekvermaa10.Demo                : Found owner with ownerId 10
+2025-12-02T19:36:00.153+05:30 ERROR 54036 --- [Demo] [main] com.abhishekvermaa10.Demo                : Please Enter Even number Owner Id
