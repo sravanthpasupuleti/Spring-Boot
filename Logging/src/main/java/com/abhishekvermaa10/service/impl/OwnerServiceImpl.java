@@ -12,18 +12,22 @@ import com.abhishekvermaa10.service.OwnerService;
 public class OwnerServiceImpl implements OwnerService {
 	@Autowired
 	private OwnerRepository ownerRepository;
-	@Value("10")
+	@Value("${owner.id}")
 	private int ownerId;
+
+	@Value("${owner.exc}")
+	private String owner_exc;
 
 	public OwnerServiceImpl() {
 		System.out.println("OwnerServiceImpl bean created.");
 	}
 
+	@Override
 	public void ModifyOwnerId(int id) throws OwnerNotFoundException{
 		if(id%2 == 0){
 			this.ownerId = id;
 		}else{
-			throw new OwnerNotFoundException("Please Enter Even number Owner Id");
+			throw new OwnerNotFoundException(owner_exc);
 		}
 	}
 

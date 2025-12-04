@@ -8,12 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.PropertySource;
 
 import com.abhishekvermaa10.service.OwnerService;
 
 //@Configuration + @EnableAutoConfiguration + @ComponentScan
+@PropertySource("messages.properties")
 @SpringBootApplication
 public class Demo implements CommandLineRunner {
+	
 	@Autowired
 	private OwnerService ownerService;
 
